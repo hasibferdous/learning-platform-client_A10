@@ -5,18 +5,14 @@ import Header from '../../Pages/Shared/Header/Header';
 import SideNavBar from '../../Pages/Shared/SideNavBar/SideNavBar';
 import Footer from '../../Pages/Shared/Footer/Footer';
 
-
-
 const Main = () => {
     return (
         <div className='bg-secondary'>
         <Header></Header>
            <Container className='bg-info'>
             <Row>
-                <Col lg="3">
-                <SideNavBar></SideNavBar>
-                </Col>
-                <Col lg="9">
+
+                <Col lg="12">
                    <Outlet></Outlet>
                 </Col>
 
@@ -26,5 +22,4 @@ const Main = () => {
         </div>
     );
 };
-
 export default Main;

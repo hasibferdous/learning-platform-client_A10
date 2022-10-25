@@ -6,20 +6,20 @@ import SideNavBar from '../../Pages/Shared/SideNavBar/SideNavBar';
 import Footer from '../../Pages/Shared/Footer/Footer';
 
 
+
 const Main = () => {
     return (
-        <div><Header></Header>
-           <Container>
+        <div className='bg-secondary'>
+        <Header></Header>
+           <Container className='bg-info'>
             <Row>
                 <Col lg="3">
                 <SideNavBar></SideNavBar>
                 </Col>
-                <Col lg="7">
-                <Outlet></Outlet>
+                <Col lg="9">
+                   <Outlet></Outlet>
                 </Col>
-                <Col lg="2">
-                <h2>Right Side</h2>
-                </Col>
+
             </Row>
             </Container>
             <Footer></Footer> 

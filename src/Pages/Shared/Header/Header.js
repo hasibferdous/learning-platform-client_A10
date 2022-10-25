@@ -19,7 +19,7 @@ const Header = () => {
     }, [])
 
     return (
-<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+<Navbar className='mb-3' collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
         <Navbar.Brand className='fs-1 mb-4 '><Link to="/"> Course Academy </Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />

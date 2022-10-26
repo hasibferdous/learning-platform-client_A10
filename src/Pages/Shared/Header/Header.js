@@ -74,19 +74,19 @@ const Header = () => {
                 </div></Nav.Link>
             <Nav.Link> <Link to="/blog">Blog</Link></Nav.Link>
             <Nav.Link> <Link to="/faq">FAQ</Link></Nav.Link>
-
           </Nav>
-          <DarkModeToggle className='mb-2 me-5'
+          <DarkModeToggle className='mb-2 me-4'
           onChange={setIsDarkMode}
           checked={isDarkMode}
           size={80}
           />
-<Nav className='me-5'>
+
+<Nav className='text-success me-2 mb-2'>
           <Nav.Link href=''>
             { 
             user?.uid ?
             <>
-            <span>{user?.displayName}</span>
+            <span className='text-success me-2'>{user?.displayName}</span>
             <button onClick={handleLogOut}>Log out</button>
             </>
             :
@@ -97,13 +97,14 @@ const Header = () => {
            
             }</Nav.Link>
         </Nav>
-        <Nav className='me-5'>
+        <Nav className='me-4 mb-3'>
           <Nav.Link href=''>{user?.photoURL ? 
           <Image style={{height: '40px'}}
           roundedCircle src={user?.photoURL}></Image>
           :<FaUser></FaUser>
         }</Nav.Link>
         </Nav>
+
         </Navbar.Collapse>
       
     </Navbar>

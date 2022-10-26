@@ -1,6 +1,5 @@
 import Main from "../../Layout/Main/Main";
 import { createBrowserRouter } from "react-router-dom";
-//mport Blog from "../../Pages/Blog/Blog";
 import Courses from "../../Pages/Courses/Courses";
 import Home from "../../Pages/Home/Home";
 import Category from "../../Pages/Category/Category";

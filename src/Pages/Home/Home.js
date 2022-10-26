@@ -26,8 +26,8 @@ const Home = () => {
           alt="First slide"
         />
         <Carousel.Caption className='text-dark fs-1 text-bold'>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h3>Welcome</h3>
+          <p>To the Course Academy</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>

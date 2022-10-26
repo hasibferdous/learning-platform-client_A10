@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 
 const Register = () => {
@@ -44,32 +45,43 @@ const Register = () => {
     }
 
     return (
+      <div className='m-5 p-4'>
+        <h2 className='mb-2 text-center'><b>Register Here</b></h2>
         <Form onSubmit={handleSubmit}>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>your name</Form.Label>
+        <Form.Group className="mb-3 px-5" controlId="formBasicEmail">
+          <Form.Label><strong>Your name</strong></Form.Label>
           <Form.Control name="name" type="text" placeholder="Enter name" required/>
         </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Photo url</Form.Label>
+        <Form.Group className="mb-3 px-5" controlId="formBasicEmail">
+          <Form.Label><strong>Photo url</strong></Form.Label>
           <Form.Control name="photoURL" type="text" placeholder="Enter photourl" required/>
         </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
+        <Form.Group className="mb-3 px-5" controlId="formBasicEmail">
+          <Form.Label><strong>Email address</strong></Form.Label>
           <Form.Control name="email" type="email" placeholder="Enter email" required/>
         </Form.Group>
   
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
+        <Form.Group className="mb-3 px-5" controlId="formBasicPassword">
+          <Form.Label><strong>Password</strong></Form.Label>
           <Form.Control name="password" type="password" placeholder="Password" required/>
         </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicCheckbox">
+        <Form.Group className="mb-3 px-5" controlId="formBasicCheckbox">
           <Form.Check  onClick={handleAccepted} type="checkbox" label="Accept Terms and Conditions" />
         </Form.Group>
-        <Button variant="primary" type="submit" disabled={!accepted}>
+        <Button className='ms-5 px-3' variant="primary" type="submit" disabled={!accepted}>
           Submit
         </Button>
         <Form.Text> {error} </Form.Text>
+        <label className="text-center ms-3">
+                <Link
+                  to="/login"
+                  className="label-text-alt link link-hover text-center"
+                >
+                  Already have an account? Click Here !
+                </Link>
+              </label>
       </Form>
+      </div>
     );
 };
 

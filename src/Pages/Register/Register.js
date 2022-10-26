@@ -5,7 +5,8 @@ import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 
 const Register = () => {
 
-    const {createUser} = useContext(AuthContext);
+    const {createUser, updateUserProfile } = useContext(AuthContext);
+    const [accepted, setAccepted] = useState(false);
     const [error, SetError]= useState('')
 
     const handleSubmit = event => {
@@ -23,33 +24,48 @@ const Register = () => {
             console.log(user);
             form.reset();
             SetError('');
+            handleUpdateUserProfile(name, photoURL)
         })
         .catch(e => console.error(e));
+    }
+
+    const handleUpdateUserProfile = (name, photoURL) =>{
+      const profile = {
+        displayName: name,
+        photoURL: photoURL
+      }
+      updateUserProfile(profile)
+      .then(() => {})
+      .catch(error => console.error(error));
+    }
+
+    const handleAccepted = event =>{
+      setAccepted(event.target.checked)
     }
 
     return (
         <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>your name</Form.Label>
-          <Form.Control name="name" type="text" placeholder="Enter name" />
+          <Form.Control name="name" type="text" placeholder="Enter name" required/>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Photo url</Form.Label>
-          <Form.Control name="photoURL" type="text" placeholder="Enter photourl" />
+          <Form.Control name="photoURL" type="text" placeholder="Enter photourl" required/>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
-          <Form.Control name="email" type="email" placeholder="Enter email" />
+          <Form.Control name="email" type="email" placeholder="Enter email" required/>
         </Form.Group>
   
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
-          <Form.Control name="password" type="password" placeholder="Password" />
+          <Form.Control name="password" type="password" placeholder="Password" required/>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="Check me out" />
+          <Form.Check  onClick={handleAccepted} type="checkbox" label="Accept Terms and Conditions" />
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <Button variant="primary" type="submit" disabled={!accepted}>
           Submit
         </Button>
         <Form.Text> {error} </Form.Text>

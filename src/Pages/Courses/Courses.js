@@ -65,7 +65,8 @@ const Courses = () => {
 
   </CardGroup>
 
-  <Button><Link to={`/courses/${title}`}>Get Premium Access</Link></Button>
+  <Button><Link to='/checkout'>Get Premium Access</Link></Button>
+  
   </div>
   </Col>
           

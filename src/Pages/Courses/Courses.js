@@ -59,17 +59,22 @@ const Courses = () => {
                   <small>Total enrolled:</small>
                   <span>{total_enrolled}</span>
               </div>
-              <Button variant="primary">Enroll Now</Button>
+              <Button variant="primary">Send Feedback</Button>
           </Card.Footer>
           </Card> 
 
   </CardGroup>
 
-  <Button><Link to='/checkout'>Get Premium Access</Link></Button>
-  
+
+
   </div>
   </Col>
+  <button className='m-5 p-3 text-bold none text-center'>  <Link
+          to={`/checkout/${_id}`}
           
+        >
+          <b>Get Premium Access</b>
+        </Link></button>  
         
       
       </div>

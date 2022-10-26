@@ -11,15 +11,20 @@ const CourseCard = ({courses}) => {
 
     return (
     <Container className='p-4 d-flex'>  
+
     <Row>
         <Col lg="3">
         <h2><Link className='Course-Name text-dark mt-4' to={`/courses/${_id}`}>{title}</Link></h2>
         </Col>
 
-    <Col lg="9" className='Card-Section'>
+
+
+
+
+    <Col lg="5" xs="2" md="3" className='Card-Section'>
     <div className='Card-group'>
     <CardGroup 
-    style={{ width: '28rem',  
+    style={{ width: '24rem',  
     display: 'flex'}} 
     className='p-4 bg-dark' > 
     <Card style={{ width: '1rem'}}>

@@ -15,7 +15,7 @@ const Home = () => {
 
     return (
 
-    <Container className='bg-info'>
+    <Container>
     
       <div className='m-5'>
     <Carousel  activeIndex={index} onSelect={handleSelect}>
@@ -25,9 +25,9 @@ const Home = () => {
           src="https://img.freepik.com/free-vector/students-watching-webinar-computer-studying-online_74855-15522.jpg?w=740&t=st=1666708725~exp=1666709325~hmac=b8ae2d2b657217049faddabeb88772c0f5334c1923366a63d1dad183b448060d"
           alt="First slide"
         />
-        <Carousel.Caption className='text-dark fs-1 text-bold'>
-          <h3>Welcome</h3>
-          <p>To the Course Academy</p>
+        <Carousel.Caption className='text-dark'>
+          <h1><b>Welcome</b></h1>
+          <h3><b>To the Course Academy</b></h3>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -37,9 +37,10 @@ const Home = () => {
           alt="Second slide"
         />
 
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <Carousel.Caption className='text-dark'>
+          <h1><b>Get Enroll Now</b></h1>
+          <h3><b>Your Online Course Partner</b></h3>
+          
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -49,12 +50,7 @@ const Home = () => {
           alt="Third slide"
         />
 
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
+
       </Carousel.Item>
     </Carousel>
     </div>

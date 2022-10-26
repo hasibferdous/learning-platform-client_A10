@@ -6,7 +6,7 @@ const SideNavBar = () => {
     const [categories, setCategories] = useState([]);
 
     useEffect(() =>{
-        fetch('http://localhost:5001/explore-categories')
+        fetch('https://course-academy-server-nine.vercel.app/explore-categories')
         .then(res => res.json())
         .then(data => setCategories(data));
 

@@ -2,22 +2,21 @@ import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import {FaEye, FaRegBookmark, FaShareAlt, FaStar} from 'react-icons/fa'
+import { FaRegBookmark, FaShareAlt, FaStar} from 'react-icons/fa'
 import { CardGroup, Col, Container, Image, Row } from 'react-bootstrap';
 import { BsFilePdf } from "react-icons/bs";
 import Pdf from "react-to-pdf";
 
-
 const ref = React.createRef();
-
 const Courses = () => {
-
-
-    const courses = useLoaderData();
-    const {_id, title, instructor, price, details, image_url, rating, total_enrolled} = courses;
+const courses = useLoaderData();
+const {_id, title, instructor, price, details, image_url, rating, total_enrolled} = courses;
     
+
     return (
       <div>
+
+        
         <h2 className="text-center ms-5 px-5 py-2">Course Details</h2>   
       <Pdf targetRef={ref} filename="course academy.pdf">
           {({ toPdf }) => (
@@ -26,7 +25,7 @@ const Courses = () => {
       </Pdf>
 
 
-      <Col lg="9">
+      
       <div className='Card-group'>
       <CardGroup 
       style={{ width: '40rem',  
@@ -84,7 +83,7 @@ const Courses = () => {
 
   </CardGroup>
 </div>
-</Col>
+
   <button className='m-5 p-3 text-bold none text-center'>  <Link
           to={`/checkout/${_id}`}
           
@@ -93,15 +92,7 @@ const Courses = () => {
         </Link></button>  
 
 
-        {/* <div
-          className="d-none"
-          style={{ textAlign: "start", padding: "20px", paddingRight: "20px" }}
-          ref={ref}
-        >
-          <h2 className='text-center'>Course Description</h2>
-          <h3>{title}</h3>
-          <p className='pe-5'>{details}</p>
-        </div> */}
+
 
       </div>
     );

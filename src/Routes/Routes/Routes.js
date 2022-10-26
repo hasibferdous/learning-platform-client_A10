@@ -19,17 +19,17 @@ export const routes = createBrowserRouter ([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5001/courses')
+                loader: () => fetch('https://course-academy-server-nine.vercel.app/courses')
             },
             {
                 path: '/category/:id',
                 element: <Category></Category>,
-                loader: ({params}) => fetch(`http://localhost:5001/category/${params.id}`)
+                loader: ({params}) => fetch(`https://course-academy-server-nine.vercel.app/category/${params.id}`)
             },
             {
                 path: '/courses/:id',
                 element: <Courses></Courses>,
-                loader: ({params}) => fetch(`http://localhost:5001/courses/${params.id}`)
+                loader: ({params}) => fetch(`https://course-academy-server-nine.vercel.app/courses/${params.id}`)
             },
             {
                 path: '/blog',
@@ -52,7 +52,7 @@ export const routes = createBrowserRouter ([
             {
                 path: '/checkout/:id',
                 element: <PrivateRoute><CheckOut></CheckOut></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5001/courses/${params.id}`)
+                loader: ({params}) => fetch(`https://course-academy-server-nine.vercel.app/courses/${params.id}`)
                 
             },
             {

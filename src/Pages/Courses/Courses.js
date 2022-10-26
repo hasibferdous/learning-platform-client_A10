@@ -61,8 +61,11 @@ const Courses = () => {
               </div>
               <Button variant="primary">Enroll Now</Button>
           </Card.Footer>
-          </Card>  
+          </Card> 
+
   </CardGroup>
+
+  <Button><Link to={`/courses/${title}`}>Get Premium Access</Link></Button>
   </div>
   </Col>
           

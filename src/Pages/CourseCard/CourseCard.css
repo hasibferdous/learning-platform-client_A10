@@ -1,8 +1,19 @@
+
+
 .Card-group {
   
         display: grid;
         grid-template-columns: 4fr 1fr;
-        background-color: rgb(3, 22, 10);
+
+        margin-left: 120px;
+        padding-left: 120px;
         
    
+}
+.Course-Name {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid black;
+
+        margin-bottom: -20px;
 }

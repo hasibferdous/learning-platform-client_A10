@@ -6,17 +6,17 @@ import {FaEye, FaRegBookmark, FaShareAlt, FaStar} from 'react-icons/fa'
 import './CourseCard.css'
 const CourseCard = ({courses}) => {
 
-    const {_id, title, instructor, details, image_url, rating, total_enrolled} = courses;
+    const {_id, title, image_url} = courses;
     //console.log(courses);
 
     return (
     <Container className='p-4 d-flex'>  
     <Row>
         <Col lg="3">
-        {title}
+        <h2><Link className='Course-Name text-dark mt-4' to={`/courses/${_id}`}>{title}</Link></h2>
         </Col>
 
-    <Col lg="9">
+    <Col lg="9" className='Card-Section'>
     <div className='Card-group'>
     <CardGroup 
     style={{ width: '28rem',  
@@ -39,9 +39,6 @@ const CourseCard = ({courses}) => {
 </Col>
 </Row>
 </Container>
-
-
     );
 };
-
 export default CourseCard;

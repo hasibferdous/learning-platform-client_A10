@@ -14,9 +14,9 @@ const {_id, title, instructor, price, details, image_url, rating, total_enrolled
     
 
     return (
-      <div>
+      <div className='container'>
 
-        
+
         <h2 className="text-center ms-5 px-5 py-2">Course Details</h2>   
       <Pdf targetRef={ref} filename="course academy.pdf">
           {({ toPdf }) => (
@@ -26,12 +26,12 @@ const {_id, title, instructor, price, details, image_url, rating, total_enrolled
 
 
       
-      <div className='Card-group'>
+      <div className='Container' style={{ width: '22rem', height: '70rem'  
+      }}>
       <CardGroup 
-      style={{ width: '40rem',  
-      display: 'flex'}} 
+    
       className='p-4 d-flex justify-content-end' > 
-      <Card style={{ width: '1rem' }}>
+      <Card>
           <Card.Header className='d-flex justify-content-between align-items-center'>
 
               <div>

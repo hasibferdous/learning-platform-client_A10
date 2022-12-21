@@ -27,7 +27,7 @@ const Home = () => {
         />
         <Carousel.Caption className='text-dark'>
           <h1><b>Welcome</b></h1>
-          <h3><b>To the Course Academy</b></h3>
+          <h3><b>To Course Academy</b></h3>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>

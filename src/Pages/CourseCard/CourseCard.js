@@ -2,7 +2,6 @@ import React from 'react';
 import { Button, CardGroup, Col, Container, Image, Row } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
-import {FaEye, FaRegBookmark, FaShareAlt, FaStar} from 'react-icons/fa'
 import './CourseCard.css'
 const CourseCard = ({courses}) => {
 
@@ -11,9 +10,8 @@ const CourseCard = ({courses}) => {
 
     return (
     <Container className='p-4 d-flex'>  
-
     <Row>
-        <Col lg="3">
+        <Col lg="3 me-5">
         <h2><Link className='Course-Name text-dark mt-4' to={`/courses/${_id}`}>{title}</Link></h2>
         </Col>
 
@@ -21,17 +19,17 @@ const CourseCard = ({courses}) => {
 
 
 
-    <Col lg="5" xs="2" md="3" className='Card-Section'>
-    <div className='Card-group'>
+    <Col  className='Card-Section' style={{ width: '20rem', height: '30rem'  
+      }}>
+    <div className='Card-group' >
     <CardGroup 
-    style={{ width: '24rem',  
-    display: 'flex'}} 
+    style={{ width: '20rem', height: '30rem'  }}
     className='p-4 bg-dark' > 
-    <Card style={{ width: '1rem'}}>
+    <Card>
 
         <Card.Body>
           <Card.Title>{title}</Card.Title>
-          <Card.Img variant="top" src={image_url} style={{ width: '20rem', height:'20rem'}} className='mb-2'/>
+          <Card.Img variant="top" src={image_url} style={{ width: '15rem', height:'20rem'}} className='mb-2'/>
           <Card.Text>
             {
                <Button><Link className='text-dark mt-4' to={`/courses/${_id}`}>See Details</Link></Button>

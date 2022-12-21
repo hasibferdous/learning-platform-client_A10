@@ -28,7 +28,7 @@ export const routes = createBrowserRouter ([
             },
             {
                 path: '/courses/:id',
-                element: <Courses></Courses>,
+                element: <PrivateRoute><Courses></Courses></PrivateRoute> ,
                 loader: ({params}) => fetch(`https://course-academy-server-nine.vercel.app/courses/${params.id}`)
             },
             {
@@ -50,7 +50,7 @@ export const routes = createBrowserRouter ([
                 element: <Register></Register>
             },
             {
-                path: '/checkout/:id',
+                path: '/checkout',
                 element: <PrivateRoute><CheckOut></CheckOut></PrivateRoute>,
                 loader: ({params}) => fetch(`https://course-academy-server-nine.vercel.app/courses/${params.id}`)
                 

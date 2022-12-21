@@ -16,9 +16,9 @@ const Footer = () => {
 
 
     return (
-        <div className='text-center mt-3 bg-dark text-white'>
+        <div className='text-center mt-5  ps-5 pe-5 pb-5 bg-dark text-white'>
 
-            <h5 className='mt-3'>Find us on</h5>
+            <h5 className='mt-5 pt-5'>Find us on</h5>
             <ButtonGroup>
             <Button className='mb-5 ms-2 rounded-5' variant="outline-info"><FaFacebook></FaFacebook></Button>
             <Button className='mb-5 ms-2 rounded-5' variant="outline-info"><FaInstagram></FaInstagram></Button>
@@ -26,7 +26,7 @@ const Footer = () => {
             <Button className='mb-5 ms-2 rounded-5' variant="outline-info"><FaWhatsapp></FaWhatsapp></Button>
             <Button className='mb-5 ms-2 rounded-5' variant="outline-info"><FaYoutube></FaYoutube></Button>
             </ButtonGroup>
-            <p>Copywrite hf@2022</p>
+            <p className='pb-5'>Copyright@2022</p>
         </div>
     );
 };

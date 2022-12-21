@@ -17,10 +17,12 @@ const SideNavBar = () => {
             
             <div className='ms-5 text-dark'>
               {
-                    categories.map(category => <p key={category.id}>
+                    categories.map(category =>
+                     <p key={category.id}>
                         <Link to={`/category/${category.id}`}>{category.name}  </Link>
                     </p>)
                 }
+                
                 </div>
         </div>
     );

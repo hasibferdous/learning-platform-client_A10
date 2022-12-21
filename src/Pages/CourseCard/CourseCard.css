@@ -1,19 +1,10 @@
 
 
-.Card-group {
-  
-        display: grid;
-        grid-template-columns: 1fr  1fr 1fr;
-        margin-right: 130px;
-        padding-right: 130px;
-   
-        
-   
-}
+
 .Course-Name {
         display: flex;
         flex-direction: row;
-        flex-direction: column;
+        
         
 }
 
@@ -21,6 +12,6 @@
     .Card-group {
 
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 }
